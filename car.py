@@ -29,4 +29,7 @@ class Car(sprite.Sprite):
         elif keys[K_s]:
             if self.rect.y < end_pose:
                 self.rect.y += self.step
-
+                
+    def collide(self, obj):
+        if self.rect.colliderect(obj.rect):
+            return True

@@ -12,13 +12,3 @@ class Button(sprite.Sprite):
 
     def reset(self):
         window.blit(self.img, (self.rect.x, self.rect.y))
-
-    def clicked(self):
-        for e in event.get():
-            if e.type == MOUSEBUTTONDOWN:
-                if e.button == 1:
-                    pos = mouse.get_pos()
-                    print(pos)
-                    if self.rect.collidepoint(pos):
-                        print("CLICKED")
-                        return True
